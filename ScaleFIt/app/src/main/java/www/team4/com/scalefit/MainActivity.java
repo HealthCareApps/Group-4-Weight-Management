@@ -13,13 +13,9 @@ public class mainActivity extends AppCompatActivity {
 
     private static  final boolean On = true;
     private static  final boolean Off = false;
-
     private final static String TAG = Activity.class.getSimpleName();
 
-
-
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         if (On) Log.i(TAG, "onCreate Called");
         super.onCreate(savedInstanceState);
@@ -28,14 +24,12 @@ public class mainActivity extends AppCompatActivity {
         if (On) Log.i(TAG, "Toolbar Created");
         setSupportActionBar(toolbar);
 
-
-
             }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+        if (On) Log.i(TAG, " onCreateOptionsMenu Called");
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -45,21 +39,25 @@ public class mainActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+        if (On) Log.i(TAG, "onOptionItemSelected");
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
 
         if (id == R.id.action_settings) {
             if (On) Log.i(TAG, "Action Settings Selected");
+            startActivity(new Intent(this, Settings.class));
             return true;
         }
         if (id == R.id.action_about) {
             if (On) Log.i(TAG, "Action About Selected");
             startActivity(new Intent(this, aboutActivity.class));
+            return true;
         }
         if (id == R.id.action_team) {
             if (On) Log.i(TAG, "Action Team Selected");
             startActivity(new Intent(this, teamActivity.class));
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

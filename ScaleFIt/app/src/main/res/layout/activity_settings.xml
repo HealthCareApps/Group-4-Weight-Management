@@ -8,8 +8,13 @@
     tools:context="www.team4.com.scalefit.Settings">
 
 
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"/>
 
-    <include layout="@layout/content_settings" />
+    <include layout="@layout/content_settings"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
-</RelativeLayout
-    >
+</RelativeLayout>

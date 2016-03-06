@@ -5,8 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".aboutActivity">
+    tools:context="www.team4.com.scalefit.aboutActivity">
+
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"/>
 
 
 
-</RelativeLayout>
+    <include layout="@layout/content_about"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</RelativeLayout
+    >
