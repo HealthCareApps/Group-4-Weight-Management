@@ -5,14 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="www.team4.com.scalefit.MainActivity">
+    tools:context=".mainActivity">
+
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"/>
 
 
 
-
-
-
-    <include layout="@layout/content_main" />
+    <include layout="@layout/content_main"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
 
