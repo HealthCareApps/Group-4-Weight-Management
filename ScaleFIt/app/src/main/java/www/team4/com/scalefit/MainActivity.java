@@ -24,7 +24,7 @@ public class mainActivity extends AppCompatActivity {
         if (On) Log.i(TAG, "Toolbar Created");
         setSupportActionBar(toolbar);
 
-            }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -56,7 +56,7 @@ public class mainActivity extends AppCompatActivity {
         }
         if (id == R.id.action_team) {
             if (On) Log.i(TAG, "Action Team Selected");
-            startActivity(new Intent(this, teamActivity.class));
+            startActivity(new Intent(this, Team4Activity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);

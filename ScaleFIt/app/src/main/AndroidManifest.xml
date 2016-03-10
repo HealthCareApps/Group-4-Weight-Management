@@ -35,12 +35,15 @@
             android:name=".loginActivity"
             android:label="@string/title_activity_login" />
         <activity
-            android:name=".teamActivity"
-            android:label="@string/title_activity_team"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".aboutActivity"
             android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".Team4Activity"
+            android:label="@string/title_activity_team4"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
