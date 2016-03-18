@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class teamActivity extends AppCompatActivity {
+public class aboutActivity extends AppCompatActivity {
 
     private static  final boolean On = true;
     private static  final boolean Off = false;
@@ -18,7 +18,7 @@ public class teamActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_team);
+        setContentView(R.layout.activity_about);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
@@ -28,7 +28,7 @@ public class teamActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         if (On) Log.i(TAG, " onCreateOptionsMenu Called");
-        getMenuInflater().inflate(R.menu.menu_team, menu);
+        getMenuInflater().inflate(R.menu.menu_about, menu);
         return true;
     }
 
@@ -54,7 +54,7 @@ public class teamActivity extends AppCompatActivity {
         }
         if (id == R.id.action_team) {
             if (On) Log.i(TAG, "Action Team Selected");
-            startActivity(new Intent(this, teamActivity.class));
+            startActivity(new Intent(this, Team4Activity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
