@@ -58,7 +58,7 @@ public class mainActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.action_team) {
-            if (On) Log.i(TAG, "Action Team Selected");
+            if (On) Log.i(TAG, "Action Team Option Selected");
             startActivity(new Intent(this, Team4Activity.class));
             Toast.makeText(this, "Hey you just hit " + item.getTitle(), Toast.LENGTH_SHORT).show();
             return true;
