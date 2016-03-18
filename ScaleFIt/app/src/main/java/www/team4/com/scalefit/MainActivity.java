@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class mainActivity extends AppCompatActivity {
 
@@ -47,16 +48,19 @@ public class mainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             if (On) Log.i(TAG, "Action Settings Selected");
             startActivity(new Intent(this, Settings.class));
+            Toast.makeText(this, "Hey you just hit " + item.getTitle(), Toast.LENGTH_SHORT).show();
             return true;
         }
         if (id == R.id.action_about) {
             if (On) Log.i(TAG, "Action About Selected");
             startActivity(new Intent(this, aboutActivity.class));
+            Toast.makeText(this, "Hey you just hit " + item.getTitle(), Toast.LENGTH_SHORT).show();
             return true;
         }
         if (id == R.id.action_team) {
             if (On) Log.i(TAG, "Action Team Selected");
             startActivity(new Intent(this, Team4Activity.class));
+            Toast.makeText(this, "Hey you just hit " + item.getTitle(), Toast.LENGTH_SHORT).show();
             return true;
         }
         return super.onOptionsItemSelected(item);
