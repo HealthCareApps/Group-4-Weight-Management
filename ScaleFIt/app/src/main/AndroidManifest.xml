@@ -17,9 +17,18 @@
             android:name=".mainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".splashScreenActivity"
+            android:label="@string/title_activity_splash_screen"
+            android:theme="@style/AppTheme.NoActionBar">
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -27,13 +36,7 @@
             android:name=".Settings"
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".SplashScreen"
-            android:label="@string/title_activity_splash_screen"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".loginActivity"
-            android:label="@string/title_activity_login" />
+
         <activity
             android:name=".aboutActivity"
             android:label="@string/title_activity_about"
@@ -44,7 +47,7 @@
         <activity
             android:name=".Team4Activity"
             android:label="@string/title_activity_team4"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
