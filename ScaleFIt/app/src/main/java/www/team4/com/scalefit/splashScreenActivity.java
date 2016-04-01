@@ -4,11 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.VideoView;
 
 public class splashScreenActivity extends Activity {
 
     private static boolean splashCount = false;
-    private final int SPLASH_LENGTH = 4000; // 4 seconds
+    private final int SPLASH_LENGTH = 4200; // 4.2 seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,9 @@ public class splashScreenActivity extends Activity {
 
         if (!splashCount) {
             setContentView(R.layout.content_splash_screen);
+            VideoView vv =(VideoView)this.findViewById(R.id.splashVideo);
+            vv.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.splash);
+            vv.start();
             new Handler().postDelayed(new Runnable() {
 
                 @Override
