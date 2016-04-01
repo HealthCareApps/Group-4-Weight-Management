@@ -65,4 +65,9 @@ public class mainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    public void stopSubclass()
+    {
+        // created this method so the system would recognize a change. Delete later
+        // Dead Code
+    }
 }
