@@ -19,7 +19,7 @@ public class splashScreenActivity extends Activity {
         if (!splashCount) {
             setContentView(R.layout.content_splash_screen);
             VideoView vv =(VideoView)this.findViewById(R.id.splashVideo);
-            vv.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.splash);
+            vv.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.splash_black);
             vv.start();
             new Handler().postDelayed(new Runnable() {
 
