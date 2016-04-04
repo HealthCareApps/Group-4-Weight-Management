@@ -19,7 +19,7 @@ public class splashScreenActivity extends Activity {
         if (!splashCount) {
             setContentView(R.layout.content_splash_screen);
             VideoView vv =(VideoView)this.findViewById(R.id.splashVideo);
-            vv.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.splash);
+            vv.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.splash_black);
             vv.start();
             new Handler().postDelayed(new Runnable() {
 
@@ -28,7 +28,7 @@ public class splashScreenActivity extends Activity {
                     /*Intent ContainerIntent = new Intent(splash_Screen_Activity.this,
                             ContainerActivity.class);
                     splash_Screen_Activity.this.startActivity(ContainerIntent);*/
-                    startActivity(new Intent(splashScreenActivity.this, mainActivity.class));
+                    startActivity(new Intent(splashScreenActivity.this, MainActivity.class));
                     splashScreenActivity.this.finish();
                 }
 
@@ -36,7 +36,7 @@ public class splashScreenActivity extends Activity {
 
             splashCount = true;
         } else {
-            Intent goToContainer = new Intent(splashScreenActivity.this, mainActivity.class);
+            Intent goToContainer = new Intent(splashScreenActivity.this, MainActivity.class);
             goToContainer.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(goToContainer);
             finish();
