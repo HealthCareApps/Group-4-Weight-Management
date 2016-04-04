@@ -28,5 +28,7 @@
     <string name="lastName_Label">Last Name</string>
     <string name="firstName_Hint">First Name</string>
     <string name="lastName_Hint">Last Name</string>
+    <string name="dob_hint">Date of Birth</string>
+    <string name="dob_label">Date of Birth</string>
 
 </resources>
