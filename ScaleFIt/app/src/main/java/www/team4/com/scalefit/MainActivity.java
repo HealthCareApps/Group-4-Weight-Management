@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         };  Drawer.setDrawerListener(mDrawerToggle);
             mDrawerToggle.syncState();
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -110,6 +109,16 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Hey you just hit " + item.getTitle(), Toast.LENGTH_SHORT).show();
             return true;
         }
+        if (id == R.id.action_weight) {
+            if (On) Log.i(TAG, "Action Weight Option Selected");
+            startActivity(new Intent(this, weightScreenActivity.class));
+            Toast.makeText(this, "Hey you just hit " + item.getTitle(), Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
-    }
+}
+
+
+
