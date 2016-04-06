@@ -3,11 +3,16 @@ package www.team4.com.scalefit;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,15 +21,57 @@ public class MainActivity extends AppCompatActivity {
     private static  final boolean Off = false;
     private final static String TAG = Activity.class.getSimpleName();
 
+    String TITLES[] = {"Home","Profile"};
+    int ICONS[] = {R.drawable.ic_account_balance_black_24dp,R.drawable.ic_person_black_24dp};
+
+    String NAME = "Andrew Barbosa";
+    String EMAIL = "abab@gmail.com";
+    int PROFILE = R.drawable.andrew2;
+    private Toolbar toolbar;
+    RecyclerView mRecyclerView;
+    RecyclerView.Adapter mAdapter;
+    RecyclerView.LayoutManager mLayoutManager;
+    DrawerLayout Drawer;
+    ActionBarDrawerToggle mDrawerToggle;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (On) Log.i(TAG, "onCreate Called");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+         toolbar = (Toolbar) findViewById(R.id.app_bar);
         if (On) Log.i(TAG, "Toolbar Created");
         setSupportActionBar(toolbar);
+        mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView);
 
+        mRecyclerView.setHasFixedSize(true);
+
+        mAdapter = new MyAdapter(TITLES,ICONS,NAME,EMAIL,PROFILE);
+
+
+        mRecyclerView.setAdapter(mAdapter);
+
+        mLayoutManager = new LinearLayoutManager(this);
+
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        Drawer = (DrawerLayout) findViewById(R.id.DrawerLayout);
+        mDrawerToggle = new ActionBarDrawerToggle(this,Drawer,toolbar,R.string.openDrawer,
+                R.string.closeDrawer) {
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+                // Code here will execute once drawer is closed
+            }
+        };  Drawer.setDrawerListener(mDrawerToggle);
+            mDrawerToggle.syncState();
     }
 
     @Override
@@ -65,9 +112,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    public void stopSubclass()
-    {
-        // created this method so the system would recognize a change. Delete later
-        // Dead Code
     }
-}

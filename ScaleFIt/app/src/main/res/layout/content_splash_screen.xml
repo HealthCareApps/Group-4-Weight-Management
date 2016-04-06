@@ -16,7 +16,6 @@
     <VideoView android:id="@+id/splashVideo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/team4_splash_screen"
         android:layout_centerInParent="true" />
 
 
