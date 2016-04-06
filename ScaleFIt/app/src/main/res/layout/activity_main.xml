@@ -39,7 +39,20 @@
     <!--<include layout="@layout/content_main"
         android:layout_below="@+id/app_bar"
         android:layout_width="match_parent"
+<<<<<<< Updated upstream
         android:layout_height="match_parent"/> -->
+=======
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight Page Test"
+        android:id="@+id/button"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="setContentView" />
+>>>>>>> Stashed changes
 
 
 </android.support.v4.widget.DrawerLayout>
