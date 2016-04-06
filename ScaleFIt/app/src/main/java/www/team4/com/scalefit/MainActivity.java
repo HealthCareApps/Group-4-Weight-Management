@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         mRecyclerView.setHasFixedSize(true);
 
-        mAdapter = new MyAdapter(TITLES,ICONS,NAME,EMAIL,PROFILE);
+        mAdapter = new MyAdapter1(TITLES,ICONS,NAME,EMAIL,PROFILE);
 
 
         mRecyclerView.setAdapter(mAdapter);
