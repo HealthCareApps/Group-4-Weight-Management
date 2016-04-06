@@ -118,10 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    }
-<<<<<<< Updated upstream
-=======
 }
 
 
->>>>>>> Stashed changes
+

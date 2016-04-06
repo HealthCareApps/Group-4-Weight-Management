@@ -36,7 +36,7 @@
     <string name="user1Email">abab@gmail.com</string>
     <string name="openDrawer">Open</string>
     <string name="closeDrawer">Close</string>
-    <string name="title_activity_weight_screen_activity">weightScreenActivity</string>
+    <string name="title_activity_weight_screen_activity">WeightScreen</string>
     <string name="current_weight">Current Weight</string>
     <string name="target_weight">Target Weight</string>
     <string name="take_to_weight">Weigh IN</string>

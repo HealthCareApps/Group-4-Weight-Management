@@ -46,15 +46,19 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".Team4Activity"
             android:label="@string/title_activity_team4"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RegisterActivity"
-            android:label="@string/title_activity_register" />
-        <activity android:name=".weightScreenActivity"></activity>
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".weightScreenActivity"
+            android:label="@string/title_activity_weight_screen_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
