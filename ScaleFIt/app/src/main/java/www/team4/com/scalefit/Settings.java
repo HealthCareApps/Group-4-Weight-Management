@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class Settings extends AppCompatActivity {
 
@@ -56,6 +57,13 @@ public class Settings extends AppCompatActivity {
             startActivity(new Intent(this, Team4Activity.class));
             return true;
         }
+        if (id == R.id.action_weight) {
+            if (On) Log.i(TAG, "Action Weight Option Selected");
+            startActivity(new Intent(this, weightScreenActivity.class));
+            Toast.makeText(this, "Hey you just hit " + item.getTitle(), Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 }
