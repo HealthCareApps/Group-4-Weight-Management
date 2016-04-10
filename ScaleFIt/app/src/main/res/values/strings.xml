@@ -43,6 +43,7 @@
     <string name="weight_landing">Weight Tracker</string>
     <string name="weight_current">Current Weight</string>
     <string name="weight_target">Target Weight</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
 
 
 </resources>
