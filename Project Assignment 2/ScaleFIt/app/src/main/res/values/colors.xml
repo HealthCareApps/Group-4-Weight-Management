@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default Resources -->
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#D32F2F</color>
+    <color name="colorAccent">#FF9800</color>
+    <color name="colorSplashScreen">#000000</color>
+
+    <!--Color variant of the app bar -->
+    <!--Dark variant of the status bar. -->
+    <color name="primary_dark">#D32F2F</color>
+    <!-- Primary  Color-->
+    <color name="primary">#F44336</color>
+    <!-- Light color variant of the app bar-->
+    <color name="primary_light">#FFCDD2</color>
+    <!-- Accent color-->
+    <color name="accent">#03A9F4</color>
+    <!--Primary text color. -->
+    <color name="primary_text">#212121</color>
+    <!--Secondary text color -->
+    <color name="secondary_text">#727272</color>
+    <!-- Icon Color -->
+    <color name="icons">#FFFFFF</color>
+    <!-- Divider color -->
+    <color name="divider">#B6B6B6</color>
+    <!-- -->
+
+    <integer-array name="ScaleFit_colors">
+        <item>@color/primary</item>
+        <item>@color/primary_dark</item>
+        <item>@color/primary_light</item>
+        <item>@color/accent</item>
+        <item>@color/primary_text</item>
+        <item>@color/secondary_text</item>
+        <item>@color/icons</item>
+        <item>@color/divider</item>
+        <item>@color/colorSplashScreen</item>
+    </integer-array>
+</resources>
