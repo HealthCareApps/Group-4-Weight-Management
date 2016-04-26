@@ -15,8 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.firebase.client.Firebase;
-
 public class MainActivity extends AppCompatActivity {
 
     private static  final boolean On = true;
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     String TITLES[] = {"Home","Profile"};
     int ICONS[] = {R.drawable.ic_account_balance_black_24dp,R.drawable.ic_person_black_24dp};
 
-    String NAME = "Andrew Barbosa"; //This may need to be redone for server
+    String NAME = "Andrew Barbosa";
     String EMAIL = "abab@gmail.com";
     int PROFILE = R.drawable.andrew2;
     private Toolbar toolbar;
