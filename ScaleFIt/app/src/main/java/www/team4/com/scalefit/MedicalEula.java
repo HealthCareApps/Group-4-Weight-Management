@@ -48,7 +48,7 @@ public class MedicalEula {
                     + versionInfo.versionName;
 
             // EULA text
-            String message = mContext.getString(R.string.eula_value);
+            String message = mContext.getString(R.string.medical_eula_value);
 
             // Disable orientation changes, to prevent parent activity
             // reinitialization
