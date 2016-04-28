@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class WelcomeActivity extends AppCompatActivity {
     Button btnRegister;
     TextView SignIn;
+    TextView skipText;
 
     CustomPagerAdapter mCustomPagerAdapter;
     ViewPager mViewPager;
@@ -45,6 +46,15 @@ public class WelcomeActivity extends AppCompatActivity {
 
             }
         });
+        skipText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+                WelcomeActivity.this.finish();
+
+            }
+        });
 
 
 
@@ -53,6 +63,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
         btnRegister =(Button)findViewById(R.id.buttonRegister);
         SignIn =(TextView)findViewById(R.id.buttonLogin);
+        skipText =(TextView)findViewById(R.id.skipText);
     }
 
 }

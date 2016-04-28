@@ -26,6 +26,7 @@ public class CustomPagerAdapter  extends PagerAdapter{
             R.drawable.healthy_meal,
     };
 
+
     @Override
     public int getCount() {
         return mResources.length;
