@@ -16,6 +16,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -26,8 +27,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -39,6 +44,10 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
      */
+
+    private static  final boolean On = true;
+    private static  final boolean Off = false;
+    private final static String TAG = RegisterActivity.class.getSimpleName();
     private static final String[] DUMMY_CREDENTIALS = new String[]{
             "foo@example.com:hello", "bar@example.com:world"
     };
@@ -53,11 +62,14 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
     private View mProgressView;
     private View mLoginFormView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Firebase.setAndroidContext(this);
         setContentView(R.layout.activity_register);
         // Set up the login form.
+
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
 
@@ -77,18 +89,19 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
+              attemptLogin();
+                if (On) Log.i(TAG, "onClick Called");
             }
         });
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
     }
 
     private void populateAutoComplete() {
         getLoaderManager().initLoader(0, null, this);
     }
-
 
     /**
      * Attempts to sign in or register the account specified by the login form.
@@ -96,6 +109,35 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
      * errors are presented and no actual login attempt is made.
      */
     private void attemptLogin() {
+
+        if (On) Log.i(TAG, "onClick Called");
+        Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/");
+        EditText emailText = (EditText)findViewById(R.id.email);
+        EditText passText  = (EditText)findViewById(R.id.password);
+        String password ;
+        String email ;
+
+
+        email = emailText.getText().toString();
+        password = passText.getText().toString();
+
+        ref.createUser(email, password, new Firebase.ValueResultHandler<Map<String, Object>>() {
+            @Override
+            public void onSuccess(Map<String, Object> result) {
+                System.out.println("Successfully created user account with uid: " + result.get("uid"));
+                if (On) Log.i(TAG, "WHY U NO WORK");
+            }
+
+            @Override
+            public void onError(FirebaseError firebaseError) {
+                // there was an error
+                // System.out.println("There was an error????");
+                if (On) Log.i(TAG, "onERROROROROROROR");
+
+            }
+        });
+
+
         if (mAuthTask != null) {
             return;
         }
@@ -103,10 +145,10 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         // Reset errors.
         mEmailView.setError(null);
         mPasswordView.setError(null);
-
-        // Store values at the time of the login attempt.
-        String email = mEmailView.getText().toString();
-        String password = mPasswordView.getText().toString();
+//
+//        // Store values at the time of the login attempt.
+//        String email = mEmailView.getText().toString();
+//        String password = mPasswordView.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
@@ -298,5 +340,6 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
             showProgress(false);
         }
     }
+
 }
 
