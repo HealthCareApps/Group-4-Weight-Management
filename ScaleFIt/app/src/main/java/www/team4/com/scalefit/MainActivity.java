@@ -21,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
     private static  final boolean Off = false;
     private final static String TAG = Activity.class.getSimpleName();
 
-    String TITLES[] = {"Home","Profile"};
-    int ICONS[] = {R.drawable.ic_account_balance_black_24dp,R.drawable.ic_person_black_24dp};
+    String TITLES[] = {"Home","Profile","Weigh In","Team","Settings"};
+    int ICONS[] = {R.drawable.ic_account_balance_black_24dp,R.drawable.ic_person_black_24dp,
+            R.drawable.ic_assignment_black_24dp,R.drawable.ic_group_black_24dp,
+            R.drawable.ic_settings_black_24dp};
 
     String NAME = "Andrew Barbosa";
     String EMAIL = "abab@gmail.com";
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         mRecyclerView.setHasFixedSize(true);
 
-        mAdapter = new MyAdapter1(TITLES,ICONS,NAME,EMAIL,PROFILE);
+        mAdapter = new MainMenuAdapter(TITLES,ICONS,NAME,EMAIL,PROFILE);
 
 
         mRecyclerView.setAdapter(mAdapter);
