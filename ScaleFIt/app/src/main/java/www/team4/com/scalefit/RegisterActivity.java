@@ -286,7 +286,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
             showProgress(false);
 
             if (success) {
-                startActivity(new Intent(RegisterActivity.this, EULAActivity.class));
+                startActivity(new Intent(RegisterActivity.this, MainActivity.class));
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
