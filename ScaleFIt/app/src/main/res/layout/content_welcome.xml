@@ -76,7 +76,7 @@
         android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/skip"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/buttontext"
         android:id="@+id/skipText"
