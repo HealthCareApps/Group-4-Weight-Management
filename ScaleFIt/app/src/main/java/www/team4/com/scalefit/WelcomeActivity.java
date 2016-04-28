@@ -18,6 +18,7 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        new ScaleFitEula(this).show();
         setContentView(R.layout.activity_welcome);
 
 
