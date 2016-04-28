@@ -11,6 +11,7 @@ android {
         versionCode 1
         versionName "1.0.0"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -27,5 +28,5 @@ dependencies {
     compile 'com.android.support:design:22.2.1'
     compile 'de.hdodenhof:circleimageview:1.2.1'
     compile 'com.jjoe64:graphview:4.0.1'
-
+    compile 'com.viewpagerindicator:library:2.4.1@aar'
 }
