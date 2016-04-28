@@ -23,6 +23,14 @@
     <color name="icons">#FFFFFF</color>
     <!-- Divider color -->
     <color name="divider">#B6B6B6</color>
+    <!-- Button-->
+    <color name="button">#FF9900</color>
+    <!--Button2 -->
+    <color name="button2">#FFFFFF</color>
+    <!-- Button-->
+    <color name="buttontext">#FFFFFF</color>
+    <!--Button2 -->
+    <color name="buttontext2">#FF9900</color>
     <!-- -->
 
     <integer-array name="ScaleFit_colors">
@@ -35,5 +43,7 @@
         <item>@color/icons</item>
         <item>@color/divider</item>
         <item>@color/colorSplashScreen</item>
+        <item>@color/button</item>
+        <item>@color/button2</item>
     </integer-array>
 </resources>

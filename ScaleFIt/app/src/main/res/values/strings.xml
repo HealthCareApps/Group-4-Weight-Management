@@ -44,8 +44,8 @@
     <string name="weight_current">Current Weight</string>
     <string name="weight_target">Target Weight</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
-    <string name="btn_Register">Register</string>
-    <string name="signin">Already Have an Account?</string>
+    <string name="btn_Register">Sign Up</string>
+    <string name="login">Log In</string>
     <string name="accept">Accept</string>
     <string name="cancel">Cancel</string>
 

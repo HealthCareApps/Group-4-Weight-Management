@@ -52,7 +52,7 @@ public class WelcomeActivity extends AppCompatActivity {
     public void createButtonAndLinks(){
 
         btnRegister =(Button)findViewById(R.id.buttonRegister);
-        SignIn =(TextView)findViewById(R.id.signInText);
+        SignIn =(TextView)findViewById(R.id.buttonLogin);
     }
 
 }
