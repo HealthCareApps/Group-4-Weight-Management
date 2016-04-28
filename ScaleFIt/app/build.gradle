@@ -12,6 +12,12 @@ android {
         versionName "1.0.0"
     }
 
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -29,4 +35,6 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:1.2.1'
     compile 'com.jjoe64:graphview:4.0.1'
     compile 'com.viewpagerindicator:library:2.4.1@aar'
+    compile 'com.android.support:support-v4:22.2.1'
+    compile 'com.firebase:firebase-client-android:2.5.2+'
 }

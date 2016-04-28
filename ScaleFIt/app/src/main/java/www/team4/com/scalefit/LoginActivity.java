@@ -17,6 +17,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -27,6 +28,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.firebase.client.AuthData;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +40,13 @@ import java.util.List;
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+
+
+
+    private static  final boolean On = true;
+    private static  final boolean Off = false;
+    private final static String TAG = LoginActivity.class.getSimpleName();
+
 
     /**
      * A dummy authentication store containing known user names and passwords.
@@ -58,6 +70,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Firebase.setAndroidContext(this);
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -97,6 +110,37 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * errors are presented and no actual login attempt is made.
      */
     private void attemptLogin() {
+
+        EditText emaileditText = (EditText) findViewById(R.id.email);
+        EditText passeditText = (EditText) findViewById(R.id.password);
+        String emailText;
+        String passwordText;
+
+
+
+        emailText = emaileditText.getText().toString();
+        passwordText = passeditText.getText().toString();
+
+
+        Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/");
+        ref.authWithPassword(emailText, passwordText, new Firebase.AuthResultHandler() {
+            @Override
+            public void onAuthenticated(AuthData authData) {
+                if (On) Log.i(TAG, "User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
+
+            }
+
+            @Override
+            public void onAuthenticationError(FirebaseError firebaseError) {
+                // there was an error
+                if (On) Log.i(TAG, "Error");
+
+            }
+        });
+
+
+       //------------------------------------------------------------------
+
         if (mAuthTask != null) {
             return;
         }
