@@ -8,11 +8,19 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
+import com.firebase.client.Firebase;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
+
+import java.util.HashMap;
+import java.util.Map;
+import www.team4.com.scalefit.LoginActivity;
 
 public class weightScreenActivity extends AppCompatActivity {
 
@@ -26,7 +34,47 @@ public class weightScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_weight_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
+        Firebase.setAndroidContext(this);
 
+        Button mButton = (Button)findViewById(R.id.currentConfirm);
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText currentW = (EditText)findViewById(R.id.currentWeight);
+                String weightCurrent = currentW.getText().toString();
+                final Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/users");
+                if (On) Log.i(TAG, "MAYBE YOU NOW");
+                Map<String, Object> map = new HashMap<String , Object>();
+                map.put("Current Weight", weightCurrent);
+//                        if(authData.getProviderData().containsKey("password")) {
+//                            map.put("email", authData.getProviderData().get("email").toString());
+//                        }
+
+                if (On) Log.i(TAG, "ErrorRERERERERERERERER?");
+               // ref.child("users").child(LoginActivity.Session_KEY.getUid()).setValue(map);
+                ref.child(LoginActivity.Session_KEY.getUid()).updateChildren(map);
+            }
+        });
+
+        Button mButton2 = (Button)findViewById(R.id.targetConfirm);
+        mButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText targetW = (EditText)findViewById(R.id.targetWeight);
+                String weightTarget = targetW.getText().toString();
+                final Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/users");
+                if (On) Log.i(TAG, "MAYBE YOU NOW");
+                Map<String, Object> map = new HashMap<String , Object>();
+                map.put("Target Weight", weightTarget);
+//                        if(authData.getProviderData().containsKey("password")) {
+//                            map.put("email", authData.getProviderData().get("email").toString());
+//                        }
+
+                if (On) Log.i(TAG, "ErrorRERERERERERERERER?");
+                // ref.child("users").child(LoginActivity.Session_KEY.getUid()).setValue(map);
+                ref.child(LoginActivity.Session_KEY.getUid()).updateChildren(map);
+            }
+        });
 
         GraphView graph = (GraphView) findViewById(R.id.graph);
         LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
