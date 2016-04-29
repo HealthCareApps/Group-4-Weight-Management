@@ -27,6 +27,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -60,6 +61,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
     // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
+    private EditText mConfirmPasswordView;
     private View mProgressView;
     private View mLoginFormView;
 
@@ -75,13 +77,14 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         populateAutoComplete();
 
         mPasswordView = (EditText) findViewById(R.id.password);
+        mConfirmPasswordView = (EditText)findViewById(R.id.confirmPassword);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
-                    return true;
-                }
+                    if (id == R.id.login || id == EditorInfo.IME_NULL) {
+                        attemptLogin();
+                        return true;
+                    }
                 return false;
             }
         });
@@ -115,12 +118,16 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/");
         EditText emailText = (EditText)findViewById(R.id.email);
         EditText passText  = (EditText)findViewById(R.id.password);
+        EditText cPassText = (EditText)findViewById(R.id.confirmPassword);
         String password ;
+        String cPassword;
         String email ;
 
 
         email = emailText.getText().toString();
         password = passText.getText().toString();
+        cPassword = cPassText.getText().toString();
+
 
         ref.createUser(email, password, new Firebase.ValueResultHandler<Map<String, Object>>() {
             @Override
@@ -146,6 +153,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         // Reset errors.
         mEmailView.setError(null);
         mPasswordView.setError(null);
+        mConfirmPasswordView.setError(null);
 //
 //        // Store values at the time of the login attempt.
 //        String email = mEmailView.getText().toString();
@@ -158,6 +166,13 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
+            cancel = true;
+        }
+
+        // Checks both passwords are equal
+        if (cPassword != password && !TextUtils.isEmpty(cPassword) && !isPasswordValid(cPassword)) {
+            mConfirmPasswordView.setError(getString(R.string.error_passwords_not_equal));
+            focusView = mConfirmPasswordView;
             cancel = true;
         }
 
