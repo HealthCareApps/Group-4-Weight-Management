@@ -33,7 +33,9 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -42,11 +44,10 @@ import java.util.List;
 public class LoginForRegisterActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
 
-
+    public static AuthData Session_KEY2;
     private static  final boolean On = true;
     private static  final boolean Off = false;
     private final static String TAG = LoginForRegisterActivity.class.getSimpleName();
-
 
     /**
      * A dummy authentication store containing known user names and passwords.
@@ -122,11 +123,25 @@ public class LoginForRegisterActivity extends AppCompatActivity implements Loade
         passwordText = passeditText.getText().toString();
 
 
-        Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/");
+        final Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/users");
         ref.authWithPassword(emailText, passwordText, new Firebase.AuthResultHandler() {
             @Override
             public void onAuthenticated(AuthData authData) {
                 if (On) Log.i(TAG, "User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
+                Session_KEY2 = authData;
+
+                EditText emaileditText = (EditText) findViewById(R.id.email);
+                final String emailText;
+                emailText = emaileditText.getText().toString();
+                if (On) Log.i(TAG, "MAYBE YOU NOW");
+                Map<String, Object> map = new HashMap<String, Object>();
+                map.put("email", emailText);
+
+                if (On) Log.i(TAG, "ErrorRERERERERERERERER?");
+                ref.child(LoginForRegisterActivity.Session_KEY2.getUid()).setValue(map);
+
+
+
 
             }
 

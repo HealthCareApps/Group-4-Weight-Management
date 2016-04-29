@@ -9,19 +9,27 @@ public class userObject {
 
     private String firstName;
     private String lastName;
-    private String userEmail;
-    private String userPassword;
-    private int age;
-    private int DOB;
-    private int weight;
-    private int BMI;
-    private float height;
-    private float armMeasure;
-    private float thighMeasure;
-    private float chestMeasure;
-    private float waistMeasure;
-    private float neckMeasure;
-    private float hipMeasure;
+    private double age;
+    private double weight;
+    private double BMI;
+    private double height;
+//    private double armMeasure;
+//    private double thighMeasure;
+//    private double chestMeasure;
+//    private double waistMeasure;
+//    private double neckMeasure;
+//    private double hipMeasure;
 
+    public double getAge(){
+        return age;
+    }
+
+    public double getWeight(){
+        return weight;
+    }
+
+    public double getHeights(){
+        return height;
+    }
 
 }
