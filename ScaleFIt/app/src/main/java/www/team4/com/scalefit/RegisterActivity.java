@@ -126,7 +126,6 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         password = passText.getText().toString();
         cPassword = cPassText.getText().toString();
 
-
         ref.createUser(email, password, new Firebase.ValueResultHandler<Map<String, Object>>() {
             @Override
             public void onSuccess(Map<String, Object> result) {

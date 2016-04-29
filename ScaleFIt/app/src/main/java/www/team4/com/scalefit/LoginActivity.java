@@ -44,7 +44,7 @@ import java.util.Map;
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
 
-    public static AuthData Session_KEY;
+    public static AuthData Session_KEY2;
     private static  final boolean On = true;
     private static  final boolean Off = false;
     private final static String TAG = LoginActivity.class.getSimpleName();
@@ -129,7 +129,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             public void onAuthenticated(AuthData authData) {
                 if (On) Log.i(TAG, "User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
                 setUser(authData);
-                Session_KEY = authData;
+                Session_KEY2 = authData;
             }
 
             @Override
@@ -356,9 +356,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                         if (On) Log.i(TAG, "MAYBE YOU NOW");
                         Map<String, String> map = new HashMap<>();
                         map.put("email", emailText);
-//                        if(authData.getProviderData().containsKey("password")) {
-//                            map.put("email", authData.getProviderData().get("email").toString());
-//                        }
 
                         if (On) Log.i(TAG, "ErrorRERERERERERERERER?");
                         ref.child("users").child(authData.getUid()).setValue(map);

@@ -20,7 +20,8 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.HashMap;
 import java.util.Map;
-import www.team4.com.scalefit.LoginActivity;
+import www.team4.com.scalefit.userObject;
+import www.team4.com.scalefit.LoginForRegisterActivity;
 
 public class weightScreenActivity extends AppCompatActivity {
 
@@ -47,13 +48,8 @@ public class weightScreenActivity extends AppCompatActivity {
                 if (On) Log.i(TAG, "MAYBE YOU NOW");
                 Map<String, Object> map = new HashMap<String , Object>();
                 map.put("Current Weight", weightCurrent);
-//                        if(authData.getProviderData().containsKey("password")) {
-//                            map.put("email", authData.getProviderData().get("email").toString());
-//                        }
-
                 if (On) Log.i(TAG, "ErrorRERERERERERERERER?");
-               // ref.child("users").child(LoginActivity.Session_KEY.getUid()).setValue(map);
-                ref.child(LoginActivity.Session_KEY.getUid()).updateChildren(map);
+                ref.child(LoginActivity.Session_KEY2.getUid()).updateChildren(map);
             }
         });
 
@@ -67,13 +63,9 @@ public class weightScreenActivity extends AppCompatActivity {
                 if (On) Log.i(TAG, "MAYBE YOU NOW");
                 Map<String, Object> map = new HashMap<String , Object>();
                 map.put("Target Weight", weightTarget);
-//                        if(authData.getProviderData().containsKey("password")) {
-//                            map.put("email", authData.getProviderData().get("email").toString());
-//                        }
 
                 if (On) Log.i(TAG, "ErrorRERERERERERERERER?");
-                // ref.child("users").child(LoginActivity.Session_KEY.getUid()).setValue(map);
-                ref.child(LoginActivity.Session_KEY.getUid()).updateChildren(map);
+                ref.child(LoginActivity.Session_KEY2.getUid()).updateChildren(map);
             }
         });
 
