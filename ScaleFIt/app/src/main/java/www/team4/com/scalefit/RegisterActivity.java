@@ -35,7 +35,7 @@ import com.firebase.client.FirebaseError;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
+import www.team4.com.scalefit.LoginActivity;
 
 /**
  * A login screen that offers login via email/password.
@@ -122,8 +122,6 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
         String password ;
         String cPassword;
         String email ;
-
-
         email = emailText.getText().toString();
         password = passText.getText().toString();
         cPassword = cPassText.getText().toString();
