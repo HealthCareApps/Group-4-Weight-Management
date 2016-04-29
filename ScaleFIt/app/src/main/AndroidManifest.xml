@@ -70,6 +70,12 @@
             android:label="@string/title_activity_welcome"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".EULAActivity" />
+        <activity
+            android:name=".UserInformationActivity"
+            android:label="User Information"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
     </application>
 
 </manifest>
