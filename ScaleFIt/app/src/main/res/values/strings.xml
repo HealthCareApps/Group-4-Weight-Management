@@ -205,6 +205,9 @@ You agree that Team 4 may collect and use information gathered in any manner as 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_firebasetemp">Firebasetemp</string>
-    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="height_inches">Height (inches)</string>
+    <string name="height_feet">Height (Feet)</string>
+    <string name="age">Age</string>
 
 </resources>
