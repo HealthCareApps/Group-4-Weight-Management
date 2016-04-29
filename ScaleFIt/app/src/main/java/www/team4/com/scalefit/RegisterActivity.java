@@ -180,7 +180,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
             focusView = mConfirmPasswordView;
             cancel = true;
         }
-        else if (cPassword != password && !TextUtils.isEmpty(cPassword) && !isPasswordValid(cPassword)) {
+        else if (cPassword != password && !isPasswordValid(cPassword)) {
             mConfirmPasswordView.setError(getString(R.string.error_passwords_not_equal));
             focusView = mConfirmPasswordView;
             cancel = true;
