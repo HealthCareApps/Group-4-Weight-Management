@@ -33,7 +33,9 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -42,12 +44,10 @@ import java.util.List;
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
 
-
+    public static AuthData Session_KEY;
     private static  final boolean On = true;
     private static  final boolean Off = false;
     private final static String TAG = LoginActivity.class.getSimpleName();
-
-
     /**
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
@@ -120,14 +120,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         emailText = emaileditText.getText().toString();
         passwordText = passeditText.getText().toString();
+        Firebase.setAndroidContext(this);
 
+         Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/users");
+         ref.authWithPassword(emailText, passwordText, new Firebase.AuthResultHandler() {
 
-        Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/");
-        ref.authWithPassword(emailText, passwordText, new Firebase.AuthResultHandler() {
             @Override
             public void onAuthenticated(AuthData authData) {
                 if (On) Log.i(TAG, "User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
-
+                setUser(authData);
+                Session_KEY = authData;
             }
 
             @Override
@@ -343,5 +345,22 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
         }
     }
-}
 
+    private void setUser(AuthData authData){
+
+        if (On) Log.i(TAG, "Ive come so far just to lose it all");
+        EditText emaileditText = (EditText) findViewById(R.id.email);
+        final String emailText;
+        emailText = emaileditText.getText().toString();
+       final Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/");
+                        if (On) Log.i(TAG, "MAYBE YOU NOW");
+                        Map<String, String> map = new HashMap<>();
+                        map.put("email", emailText);
+//                        if(authData.getProviderData().containsKey("password")) {
+//                            map.put("email", authData.getProviderData().get("email").toString());
+//                        }
+
+                        if (On) Log.i(TAG, "ErrorRERERERERERERERER?");
+                        ref.child("users").child(authData.getUid()).setValue(map);
+    }
+}
