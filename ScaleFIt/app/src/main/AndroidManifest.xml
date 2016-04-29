@@ -50,6 +50,10 @@
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".LoginForRegisterActivity"
+            android:label="@string/title_activity_login_register"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".Team4Activity"
             android:label="@string/title_activity_team4"
             android:theme="@style/AppTheme.NoActionBar" />
