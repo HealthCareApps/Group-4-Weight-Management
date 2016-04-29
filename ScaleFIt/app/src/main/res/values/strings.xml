@@ -14,10 +14,12 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
+    <string name="error_passwords_not_equal">Password does not match</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
@@ -123,7 +125,79 @@ THIS SOFTWARE AND THE ACCOMPANYING FILES ARE SOLD "AS IS" AND WITHOUT WARRANTIES
 You agree that Team 4 may collect and use information gathered in any manner as part of the product support services provided to you, if any, related to Scale Fit 1.0.0.Team 4 may also use this information to provide notices to you which may be of use or interest to you.
 
     </string>
+    <string name="medical_eula_value">
 
+        Scale Fit 1.0.0
+\n\nCopyright (c) 2016 Team 4
+
+
+\n\n*** END USER LICENSE AGREEMENT ***
+\n\nIMPORTANT: PLEASE READ THIS LICENSE CAREFULLY BEFORE USING THIS SOFTWARE.
+
+\n\nARTICLE 1: INTRODUCTION
+
+\n\nThis End User License Agreement (“EULA”) is a legal agreement between you and Team 4 , governing the license and use of the audio content owned or licensed by Team 4 and made available for purchase on this website (collectively, the “Recordings”). All use by you of the Recordings is governed by this EULA.
+
+\n\nPlease read the EULA carefully, because it is a legal contract and imposes obligations on you as a user of the Recordings or information/data taken.
+
+\n\nBY PURCHASING ANY PRODUCT OR SERVICE FROM THIS WEBSITE, YOU WILL BE BOUND BY THIS EULA, AND YOU SIGNIFY YOUR CONSENT TO THE LICENSE GRANTS CONTAINED HEREIN AS WELL AS THE TERMS AND CONDITIONS OF THIS EULA.
+
+\n\nBY PURCHASING ANY PRODUCT OR SERVICE FROM THIS WEBSITE, YOU FURTHER AGREE THAT YOU HAVE OR WILL REVIEW AND ACCEPT THE TERMS AND CONDITIONS OF THIS EULA BEFORE LISTENING TO ANY RECORDINGS.
+
+\n\nARTICLE 2: USER LICENSE
+
+\n\n2.1 User License. Subject to the terms and conditions and for the limited purposes set forth herein, Team 4 grants you the limited and non-transferable, right and license to: (i) download the Recordings you have purchased from this website and listen to the Recordings on devices owned by you; and/or (ii) listen to the compact disc containing the Recordings you purchased from this website on devices owned by you.
+
+\n\n2.2 Ownership. You hereby acknowledge that nothing in this EULA is meant or shall be deemed to give you any rights in any works of authorship or copyrights owned or licensed by Jones. In the event that the owner, in whole or jointly, of the Recordings is a party other than Jones, you agree that such party shall be a third party beneficiary under this EULA and shall have the right to enforce the terms and conditions of this EULA that pertain to such party’s rights in and to the Recordings as if such party were a party to this EULA.
+
+\n\n2.3 Restrictions. The following restrictions shall apply to your use of the Recordings in any format and on any media:
+
+\n\n(a) You may not copy or reproduce any portion of the Recordings.
+
+\n\n(b) You may not distribute, share through any information network, transfer, sell, lease, or rent any of the Recordings to any other person or entity, in whole or in part.
+
+\n\n(c) You may not change, alter, modify, or create derivative works, enhancements, extensions, or add-ons to any of the Recordings.
+
+\n\n(d) You may not decompile, reverse engineer, or disassemble any of the Recordings, in whole or in part.
+
+\n\n(e) You may not use the Recordings for commercial purposes, or purposes other than your personal use and enjoyment.
+
+\n\n(f) You will at all times comply with, and will not circumvent or attempt to circumvent, any of the restrictions on use set forth in this Section 2.3 or elsewhere in this EULA or the restrictions provided in the U.S. Copyright Act, 17 U.S.C. § 101, et. seq.
+
+\n\nARTICLE 3: CHANGES
+
+\n\nTeam 4 or the owner of this website reserve the right, in their sole discretion, and from time to time, to change the format or content of the Recordings available on this website, or the media on which such Recordings are contained. These updated or re-formatted Recordings may be made available to you for a fee. You agree that from time to time Team 4 or the owner of this website may remove or disable access to the Recordings for indefinite periods of time, or any portion thereof, at any time, without notice to you.
+
+\n\nARTICLE 4: NO MEDICAL ADVICE PROVIDED
+
+\n\nTHE CONTENTS OF THE RECORDINGS ARE NOT INTENDED TO BE A SUBSTITUTE FOR PROFESSIONAL MEDICAL ADVICE, DIAGNOSIS, OR TREATMENT. ALWAYS SEEK THE ADVICE OF YOUR PHYSICIAN OR OTHER QUALIFIED HEALTH CARE PROVIDER WITH ANY QUESTIONS YOU MAY HAVE REGARDING A MEDICAL CONDITION. RELIANCE ON ANY INFORMATION OR HYPNOTHERAPY GUIDANCE PROVIDED IN OR VIA THE RECORDINGS IS SOLELY AT YOUR OWN RISK.
+
+\n\nARTICLE 5: DISCLAIMER OF WARRANTIES AND LIABILITY
+
+\n\n5.1 Disclaimer. Team 4 is making the Recordings available to you on an “as is” and “as available” basis and you agree that your use of the Recordings is at your own risk. TEAM 4 DISCLAIMS ALL WARRANTIES THAT RELATE IN ANY WAY TO THE RECORDINGS, THE CONTENT OR ANY PORTIONS OR COMBINATIONS THEREOF, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY WARRANTY FOR INFORMATION, AVAILABILITY, ACCURACY, ADEQUACY, QUIET ENJOYMENT, NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE.
+
+\n\n5.2 Indemnity. You shall defend, indemnify, and hold harmless Team 4 and its employees and agents, from and against any and all suits, proceedings, claims, losses, and damages (including reasonable attorneys’ fees) related to: (i) any breach by you of this EULA, and (ii) any claim by a third party that arises from your use or misuse of the Recordings.
+
+\n\n5.3 Limitation of Liability. IN NO EVENT SHALL TEAM 4 OR ITS OFFICERS, DIRECTORS, AGENTS, OR LICENSORS BE LIABLE TO YOU FOR SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH THIS EULA OR YOUR USE OF OR INABILITY TO USE THE RECORDINGS, INCLUDING BUT NOT LIMITED TO LOST PROFITS, LOSS OF DATA, AND ERRORS OR OMISSIONS IN CONTENT, REGARDLESS OF THE FORM OF ACTION, WHETHER JONES KNEW OR SHOULD HAVE KNOWN OF THE POSSIBILITY OF SUCH DAMAGES. THE TOTAL LIABILITY OF TEAM 4, IF ANY, ARISING OUT OF OR IN CONNECTION WITH THIS EULA OR YOUR USE OF OR INABILITY TO USE THE RECORDINGS SHALL NOT EXCEED IN THE AGGREGATE THE FEES ACTUALLY PAID BY YOU FOR THE APPLICABLE RECORDINGS. THE PROVISIONS HEREIN CONCERNING LIMITATIONS OF LIABILITIES AND DAMAGES ALLOCATE THE RISKS OF THIS AGREEMENT BETWEEN THE PARTIES. THIS ALLOCATION IS REFLECTED IN THE ECONOMIC TERMS OF THIS AGREEMENT AND IS AN ESSENTIAL ELEMENT OF THE BASIS OF THE BARGAIN BETWEEN THE PARTIES. EACH OF THE LIMITATIONS OF LIABILITY SET FORTH ABOVE ARE INDEPENDENT OF, AND SHALL SURVIVE THE FAILURE OF, ANY OTHER PROVISION IN THIS AGREEMENT (INCLUDING EXCLUSIVE REMEDIES).
+
+\n\n5.4 Errors; Accuracy; Security. Though Jones uses reasonable efforts to ensure otherwise, the Recordings may contain errors or other inaccuracies and may not be complete, accurate, or current. JONES DOES NOT GUARANTEE, REPRESENT, OR WARRANT THAT (I) THE RECORDINGS WILL BE ERROR-FREE, ACCURATE, OR CURRENT, OR (II) YOUR USE OF THE RECORDINGS WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE FROM LOSS CORRUPTION, ATTACK, VIRUSES, INTERFERENCE, HACKING, OR OTHER SECURITY INTRUSION, AND JONES DISCLAIMS ANY LIABILITY RELATING THERETO.
+
+\n\nARTICLE 6: MISCELLANEOUS
+
+\n\n6.1 Choice of Law. This EULA shall be governed by the laws of the State of Florida (regardless of the laws that might otherwise govern under applicable Florida principles of conflicts of law) as to all matters, including but not limited to matters of validity, construction, effect, performance and remedy. West Palm Beach County, Florida shall be the proper place of venue for all suits to enforce this EULA, and any legal proceedings to enforce the provisions hereof shall be brought in the District Courts of West Palm Beach County, Florida, or in the United States District Court for the Southern District of Florida.
+
+\n\n6.2 Severability. The invalidity or unenforceability of any provision of this EULA shall not affect the validity or enforceability of the remaining provisions, and this EULA shall be construed as if such invalid or unenforceable provisions were omitted, unless the omission of such provision would deprive one of the parties of a material benefit of its bargain hereunder.
+
+\n\n6.3 Assignment. You may not assign this EULA. Any assignment made in contravention of this provision shall be null and void for all purposes.
+
+\n\n6.4 Binding Effect. This EULA shall be binding on and inure to the benefit of the parties and their respective successors and permitted assigns.
+
+\n\n6.5 Entire EULA. This EULA constitutes the entire EULA and understanding of the parties hereto in respect of the subject matter contained herein and supersedes all prior agreements, consents and understandings relating to such subject matter.
+
+\n\nARTICLE 7: REGISTRATION AND ACCEPTANCE.
+
+\n\nBy downloading, listening to, or otherwise accessing the Recordings, you represent and warrant that you are 18 years of age or older, capable of entering into a binding legal agreement, and have read, understand, and agree to be bound by all provisions of this EULA. You agree that Team 4 may collect and use information gathered in any manner as part of the product support services provided to you, if any, related to Scale Fit 1.0.0.Team 4 may also use this information to provide notices to you which may be of use or interest to you.
+    </string>
     <string name="versionNamexml">v1.0.0</string>
     <string name="skip">Skip</string>
 

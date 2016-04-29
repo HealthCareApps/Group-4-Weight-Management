@@ -23,6 +23,7 @@ public class weightScreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        new MedicalEula(this).show();
         setContentView(R.layout.activity_weight_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
