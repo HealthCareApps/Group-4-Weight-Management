@@ -122,7 +122,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         passwordText = passeditText.getText().toString();
         Firebase.setAndroidContext(this);
 
-         Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/users");
+         Firebase ref = new Firebase("https://team4-app-demo.firebaseio.com/users");
          ref.authWithPassword(emailText, passwordText, new Firebase.AuthResultHandler() {
 
             @Override
@@ -352,7 +352,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         EditText emaileditText = (EditText) findViewById(R.id.email);
         final String emailText;
         emailText = emaileditText.getText().toString();
-       final Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/");
+       final Firebase ref = new Firebase("https://team4-app-demo.firebaseio.com/");
                         if (On) Log.i(TAG, "MAYBE YOU NOW");
                         Map<String, String> map = new HashMap<>();
                         map.put("email", emailText);

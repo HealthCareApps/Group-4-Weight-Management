@@ -115,7 +115,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
     private void attemptLogin() {
 
         if (On) Log.i(TAG, "onClick Called");
-        Firebase ref = new Firebase("https://scalefit-test.firebaseio.com/");
+        Firebase ref = new Firebase("https://team4-app-demo.firebaseio.com/");
         EditText emailText = (EditText)findViewById(R.id.email);
         EditText passText  = (EditText)findViewById(R.id.password);
         EditText cPassText = (EditText)findViewById(R.id.confirmPassword);
