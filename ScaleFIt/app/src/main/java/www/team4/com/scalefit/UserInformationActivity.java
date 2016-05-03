@@ -29,7 +29,7 @@ public class UserInformationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_information);
         Firebase.setAndroidContext(this);
-        Firebase ref = new Firebase("https://team4-app-demo.firebaseio.com/users");
+        Firebase ref = new Firebase("https://scalefit.firebaseio.com/users");
 
 
 
@@ -42,7 +42,7 @@ public class UserInformationActivity extends AppCompatActivity {
 
                 EditText fName = (EditText)findViewById(R.id.editText);
                 String firstName = fName.getText().toString();
-                final Firebase ref = new Firebase("https://team4-app-demo.firebaseio.com/users");
+                final Firebase ref = new Firebase("https://scalefit.firebaseio.com/users");
                 if (On) Log.i(TAG, "MAYBE YOU NOW");
                 Map<String, Object> map = new HashMap<String , Object>();
                 map.put("First Name", firstName);

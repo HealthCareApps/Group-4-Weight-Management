@@ -44,7 +44,7 @@ public class weightScreenActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText currentW = (EditText)findViewById(R.id.currentWeight);
                 Double weightCurrent = Double.parseDouble(currentW.getText().toString());
-                final Firebase ref = new Firebase("https://team4-app-demo.firebaseio.com/users");
+                final Firebase ref = new Firebase("https://scalefit.firebaseio.com/users");
                 if (On) Log.i(TAG, "MAYBE YOU NOW");
                 Map<String, Object> map = new HashMap<String , Object>();
                 map.put("Current Weight", weightCurrent);
@@ -59,7 +59,7 @@ public class weightScreenActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText targetW = (EditText)findViewById(R.id.targetWeight);
                 double weightTarget =  Double.parseDouble(targetW.getText().toString());
-                final Firebase ref = new Firebase("https://team4-app-demo.firebaseio.com/users");
+                final Firebase ref = new Firebase("https://scalefit.firebaseio.com/users");
                 if (On) Log.i(TAG, "MAYBE YOU NOW");
                 Map<String, Object> map = new HashMap<String , Object>();
                 map.put("Target Weight", weightTarget);

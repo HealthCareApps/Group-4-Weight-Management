@@ -123,7 +123,7 @@ public class LoginForRegisterActivity extends AppCompatActivity implements Loade
         passwordText = passeditText.getText().toString();
 
 
-        final Firebase ref = new Firebase("https://team4-app-demo.firebaseio.com/users");
+        final Firebase ref = new Firebase("https://scalefit.firebaseio.com/users");
         ref.authWithPassword(emailText, passwordText, new Firebase.AuthResultHandler() {
             @Override
             public void onAuthenticated(AuthData authData) {
