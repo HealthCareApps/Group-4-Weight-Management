@@ -1,21 +1,213 @@
 <resources>
-    <string name="app_name">Scale FIt</string>
+    <string name="app_name">Scale Fit</string>
     <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <string name="action_team">Team</string>
+    <string name="action_drawer">Action Drawer</string>
+    <string name="action_weight">Weight</string>
     <string name="title_activity_about">About</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_team">Team</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_login_register">Sign in after register</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
+    <string name="prompt_password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
+    <string name="error_passwords_not_equal">Password does not match</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="title_activity_team4">Team4Activity</string>
+    <string name="title_activity_register">Register</string>
+    <string name="action_register">Register</string>
+    <string name="firstName_Label">First Name</string>
+    <string name="lastName_Label">Last Name</string>
+    <string name="firstName_Hint">First Name</string>
+    <string name="lastName_Hint">Last Name</string>
+    <string name="dob_hint">Date of Birth</string>
+    <string name="dob_label">Date of Birth</string>
+    <string name="user1">Andrew Barbosa</string>
+    <string name="user1Email">abab@gmail.com</string>
+    <string name="openDrawer">Open</string>
+    <string name="closeDrawer">Close</string>
+    <string name="title_activity_weight_screen_activity">WeightScreen</string>
+    <string name="current_weight">Current Weight</string>
+    <string name="target_weight">Target Weight</string>
+    <string name="take_to_weight">Weigh IN</string>
+    <string name="weight_landing">Weight Tracker</string>
+    <string name="weight_current">Current Weight</string>
+    <string name="weight_target">Target Weight</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="btn_Register">Sign Up</string>
+    <string name="login">Log In</string>
+    <string name="accept">Accept</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="eula_value">
+
+        Scale Fit 1.0.0
+\n\nCopyright (c) 2016 Team 4
+
+\n\n*** END USER LICENSE AGREEMENT ***
+
+\n\nIMPORTANT: PLEASE READ THIS LICENSE CAREFULLY BEFORE USING THIS SOFTWARE.
+
+\n\n1. LICENSE
+
+By receiving, opening the file package, and/or using Scale Fit 1.0.0("Software") containing this software, you agree that this End User User License Agreement(EULA) is a legally binding and valid contract and agree to be bound by it. You agree to abide by the intellectual property laws and all of the terms and conditions of this Agreement.
+
+Unless you have a different license agreement signed by Team 4 your use of Scale Fit 1.0.0 indicates your acceptance of this license agreement and warranty.
+
+Subject to the terms of this Agreement, Team 4 grants to you a limited, non-exclusive, non-transferable license, without right to sub-license, to use Scale Fit 1.0.0 in accordance with this Agreement and any other written agreement with Team 4. Team 4 does not transfer the title of Scale Fit 1.0.0 to you; the license granted to you is not a sale. This agreement is a binding legal agreement between Team 4 and the purchasers or users of Scale Fit 1.0.0.
+
+If you do not agree to be bound by this agreement, remove Scale Fit 1.0.0 from your computer now and, if applicable, promptly return to Team 4 by mail any copies of Scale Fit 1.0.0 and related documentation and packaging in your possession.
+
+\n\n2. DISTRIBUTION
+
+Scale Fit 1.0.0 and the license herein granted shall not be copied, shared, distributed, re-sold, offered for re-sale, transferred or sub-licensed in whole or in part except that you may make one copy for archive purposes only. For information about redistribution of Scale Fit 1.0.0 contact Team 4.
+
+\n\n3. USER AGREEMENT
+
+\n\n3.1 Use
+
+Your license to use Scale Fit 1.0.0 is limited to the number of licenses purchased by you. You shall not allow others to use, copy or evaluate copies of Scale Fit 1.0.0.
+
+\n\n3.2 Use Restrictions
+
+You shall use Scale Fit 1.0.0 in compliance with all applicable laws and not for any unlawful purpose. Without limiting the foregoing, use, display or distribution of Scale Fit 1.0.0 together with material that is pornographic, racist, vulgar, obscene, defamatory, libelous, abusive, promoting hatred, discriminating or displaying prejudice based on religion, ethnic heritage, race, sexual orientation or age is strictly prohibited.
+
+Each licensed copy of Scale Fit 1.0.0 may be used on one single computer location by one user. Use of Scale Fit 1.0.0 means that you have loaded, installed, or run Scale Fit 1.0.0 on a computer or similar device. If you install Scale Fit 1.0.0 onto a multi-user platform, server or network, each and every individual user of Scale Fit 1.0.0 must be licensed separately.
+
+You may make one copy of Scale Fit 1.0.0 for backup purposes, providing you only have one copy installed on one computer being used by one person. Other users may not use your copy of Scale Fit 1.0.0 . The assignment, sublicense, networking, sale, or distribution of copies of Scale Fit 1.0.0 are strictly forbidden without the prior written consent of Team 4. It is a violation of this agreement to assign, sell, share, loan, rent, lease, borrow, network or transfer the use of Scale Fit 1.0.0. If any person other than yourself uses Scale Fit 1.0.0 registered in your name, regardless of whether it is at the same time or different times, then this agreement is being violated and you are responsible for that violation!
+
+\n\n3.3 Copyright Restriction
+
+This Software contains copyrighted material, trade secrets and other proprietary material. You shall not, and shall not attempt to, modify, reverse engineer, disassemble or decompile Scale Fit 1.0.0. Nor can you create any derivative works or other works that are based upon or derived from Scale Fit 1.0.0 in whole or in part.
+
+Team 4\'s name, logo and graphics file that represents Scale Fit 1.0.0 shall not be used in any way to promote products developed with Scale Fit 1.0.0 . Team 4 retains sole and exclusive ownership of all right, title and interest in and to Scale Fit 1.0.0 and all Intellectual Property rights relating thereto.
+
+Copyright law and international copyright treaty provisions protect all parts of Scale Fit 1.0.0, products and services. No program, code, part, image, audio sample, or text may be copied or used in any way by the user except as intended within the bounds of the single user program. All rights not expressly granted hereunder are reserved for Team 4.
+
+\n\n3.4 Limitation of Responsibility
+
+You will indemnify, hold harmless, and defend Team 4 , its employees, agents and distributors against any and all claims, proceedings, demand and costs resulting from or in any way connected with your use of Team 4\'s Software.
+
+In no event (including, without limitation, in the event of negligence) will Team 4 , its employees, agents or distributors be liable for any consequential, incidental, indirect, special or punitive damages whatsoever (including, without limitation, damages for loss of profits, loss of use, business interruption, loss of information or data, or pecuniary loss), in connection with or arising out of or related to this Agreement, Scale Fit 1.0.0 or the use or inability to use Scale Fit 1.0.0 or the furnishing, performance or use of any other matters hereunder whether based upon contract, tort or any other theory including negligence.
+
+Team 4\'s entire liability, without exception, is limited to the customers\' reimbursement of the purchase price of the Software (maximum being the lesser of the amount paid by you and the suggested retail price as listed by Team 4 ) in exchange for the return of the product, all copies, registration papers and manuals, and all materials that constitute a transfer of license from the customer back to Team 4.
+
+\n\n3.5 Warranties
+
+Except as expressly stated in writing, Team 4 makes no representation or warranties in respect of this Software and expressly excludes all other warranties, expressed or implied, oral or written, including, without limitation, any implied warranties of merchantable quality or fitness for a particular purpose.
+
+\n\n3.6 Governing Law
+
+This Agreement shall be governed by the law of the United States applicable therein. You hereby irrevocably attorn and submit to the non-exclusive jurisdiction of the courts of United States therefrom. If any provision shall be considered unlawful, void or otherwise unenforceable, then that provision shall be deemed severable from this License and not affect the validity and enforceability of any other provisions.
+
+\n\n3.7 Termination
+
+Any failure to comply with the terms and conditions of this Agreement will result in automatic and immediate termination of this license. Upon termination of this license granted herein for any reason, you agree to immediately cease use of Scale Fit 1.0.0 and destroy all copies of Scale Fit 1.0.0 supplied under this Agreement. The financial obligations incurred by you shall survive the expiration or termination of this license.
+
+\n\n4. DISCLAIMER OF WARRANTY
+
+THIS SOFTWARE AND THE ACCOMPANYING FILES ARE SOLD "AS IS" AND WITHOUT WARRANTIES AS TO PERFORMANCE OR MERCHANTABILITY OR ANY OTHER WARRANTIES WHETHER EXPRESSED OR IMPLIED. THIS DISCLAIMER CONCERNS ALL FILES GENERATED AND EDITED BY Scale Fit 1.0.0 AS WELL.
+
+\n\n5. CONSENT OF USE OF DATA
+
+You agree that Team 4 may collect and use information gathered in any manner as part of the product support services provided to you, if any, related to Scale Fit 1.0.0.Team 4 may also use this information to provide notices to you which may be of use or interest to you.
+
+    </string>
+    <string name="medical_eula_value">
+
+        Scale Fit 1.0.0
+\n\nCopyright (c) 2016 Team 4
+
+
+\n\n*** END USER LICENSE AGREEMENT ***
+\n\nIMPORTANT: PLEASE READ THIS LICENSE CAREFULLY BEFORE USING THIS SOFTWARE.
+
+\n\nARTICLE 1: INTRODUCTION
+
+\n\nThis End User License Agreement (“EULA”) is a legal agreement between you and Team 4 , governing the license and use of the audio content owned or licensed by Team 4 and made available for purchase on this website (collectively, the “Recordings”). All use by you of the Recordings is governed by this EULA.
+
+\n\nPlease read the EULA carefully, because it is a legal contract and imposes obligations on you as a user of the Recordings or information/data taken.
+
+\n\nBY PURCHASING ANY PRODUCT OR SERVICE FROM THIS WEBSITE, YOU WILL BE BOUND BY THIS EULA, AND YOU SIGNIFY YOUR CONSENT TO THE LICENSE GRANTS CONTAINED HEREIN AS WELL AS THE TERMS AND CONDITIONS OF THIS EULA.
+
+\n\nBY PURCHASING ANY PRODUCT OR SERVICE FROM THIS WEBSITE, YOU FURTHER AGREE THAT YOU HAVE OR WILL REVIEW AND ACCEPT THE TERMS AND CONDITIONS OF THIS EULA BEFORE LISTENING TO ANY RECORDINGS.
+
+\n\nARTICLE 2: USER LICENSE
+
+\n\n2.1 User License. Subject to the terms and conditions and for the limited purposes set forth herein, Team 4 grants you the limited and non-transferable, right and license to: (i) download the Recordings you have purchased from this website and listen to the Recordings on devices owned by you; and/or (ii) listen to the compact disc containing the Recordings you purchased from this website on devices owned by you.
+
+\n\n2.2 Ownership. You hereby acknowledge that nothing in this EULA is meant or shall be deemed to give you any rights in any works of authorship or copyrights owned or licensed by Jones. In the event that the owner, in whole or jointly, of the Recordings is a party other than Jones, you agree that such party shall be a third party beneficiary under this EULA and shall have the right to enforce the terms and conditions of this EULA that pertain to such party’s rights in and to the Recordings as if such party were a party to this EULA.
+
+\n\n2.3 Restrictions. The following restrictions shall apply to your use of the Recordings in any format and on any media:
+
+\n\n(a) You may not copy or reproduce any portion of the Recordings.
+
+\n\n(b) You may not distribute, share through any information network, transfer, sell, lease, or rent any of the Recordings to any other person or entity, in whole or in part.
+
+\n\n(c) You may not change, alter, modify, or create derivative works, enhancements, extensions, or add-ons to any of the Recordings.
+
+\n\n(d) You may not decompile, reverse engineer, or disassemble any of the Recordings, in whole or in part.
+
+\n\n(e) You may not use the Recordings for commercial purposes, or purposes other than your personal use and enjoyment.
+
+\n\n(f) You will at all times comply with, and will not circumvent or attempt to circumvent, any of the restrictions on use set forth in this Section 2.3 or elsewhere in this EULA or the restrictions provided in the U.S. Copyright Act, 17 U.S.C. § 101, et. seq.
+
+\n\nARTICLE 3: CHANGES
+
+\n\nTeam 4 or the owner of this website reserve the right, in their sole discretion, and from time to time, to change the format or content of the Recordings available on this website, or the media on which such Recordings are contained. These updated or re-formatted Recordings may be made available to you for a fee. You agree that from time to time Team 4 or the owner of this website may remove or disable access to the Recordings for indefinite periods of time, or any portion thereof, at any time, without notice to you.
+
+\n\nARTICLE 4: NO MEDICAL ADVICE PROVIDED
+
+\n\nTHE CONTENTS OF THE RECORDINGS ARE NOT INTENDED TO BE A SUBSTITUTE FOR PROFESSIONAL MEDICAL ADVICE, DIAGNOSIS, OR TREATMENT. ALWAYS SEEK THE ADVICE OF YOUR PHYSICIAN OR OTHER QUALIFIED HEALTH CARE PROVIDER WITH ANY QUESTIONS YOU MAY HAVE REGARDING A MEDICAL CONDITION. RELIANCE ON ANY INFORMATION OR HYPNOTHERAPY GUIDANCE PROVIDED IN OR VIA THE RECORDINGS IS SOLELY AT YOUR OWN RISK.
+
+\n\nARTICLE 5: DISCLAIMER OF WARRANTIES AND LIABILITY
+
+\n\n5.1 Disclaimer. Team 4 is making the Recordings available to you on an “as is” and “as available” basis and you agree that your use of the Recordings is at your own risk. TEAM 4 DISCLAIMS ALL WARRANTIES THAT RELATE IN ANY WAY TO THE RECORDINGS, THE CONTENT OR ANY PORTIONS OR COMBINATIONS THEREOF, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY WARRANTY FOR INFORMATION, AVAILABILITY, ACCURACY, ADEQUACY, QUIET ENJOYMENT, NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE.
+
+\n\n5.2 Indemnity. You shall defend, indemnify, and hold harmless Team 4 and its employees and agents, from and against any and all suits, proceedings, claims, losses, and damages (including reasonable attorneys’ fees) related to: (i) any breach by you of this EULA, and (ii) any claim by a third party that arises from your use or misuse of the Recordings.
+
+\n\n5.3 Limitation of Liability. IN NO EVENT SHALL TEAM 4 OR ITS OFFICERS, DIRECTORS, AGENTS, OR LICENSORS BE LIABLE TO YOU FOR SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH THIS EULA OR YOUR USE OF OR INABILITY TO USE THE RECORDINGS, INCLUDING BUT NOT LIMITED TO LOST PROFITS, LOSS OF DATA, AND ERRORS OR OMISSIONS IN CONTENT, REGARDLESS OF THE FORM OF ACTION, WHETHER JONES KNEW OR SHOULD HAVE KNOWN OF THE POSSIBILITY OF SUCH DAMAGES. THE TOTAL LIABILITY OF TEAM 4, IF ANY, ARISING OUT OF OR IN CONNECTION WITH THIS EULA OR YOUR USE OF OR INABILITY TO USE THE RECORDINGS SHALL NOT EXCEED IN THE AGGREGATE THE FEES ACTUALLY PAID BY YOU FOR THE APPLICABLE RECORDINGS. THE PROVISIONS HEREIN CONCERNING LIMITATIONS OF LIABILITIES AND DAMAGES ALLOCATE THE RISKS OF THIS AGREEMENT BETWEEN THE PARTIES. THIS ALLOCATION IS REFLECTED IN THE ECONOMIC TERMS OF THIS AGREEMENT AND IS AN ESSENTIAL ELEMENT OF THE BASIS OF THE BARGAIN BETWEEN THE PARTIES. EACH OF THE LIMITATIONS OF LIABILITY SET FORTH ABOVE ARE INDEPENDENT OF, AND SHALL SURVIVE THE FAILURE OF, ANY OTHER PROVISION IN THIS AGREEMENT (INCLUDING EXCLUSIVE REMEDIES).
+
+\n\n5.4 Errors; Accuracy; Security. Though Jones uses reasonable efforts to ensure otherwise, the Recordings may contain errors or other inaccuracies and may not be complete, accurate, or current. JONES DOES NOT GUARANTEE, REPRESENT, OR WARRANT THAT (I) THE RECORDINGS WILL BE ERROR-FREE, ACCURATE, OR CURRENT, OR (II) YOUR USE OF THE RECORDINGS WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE FROM LOSS CORRUPTION, ATTACK, VIRUSES, INTERFERENCE, HACKING, OR OTHER SECURITY INTRUSION, AND JONES DISCLAIMS ANY LIABILITY RELATING THERETO.
+
+\n\nARTICLE 6: MISCELLANEOUS
+
+\n\n6.1 Choice of Law. This EULA shall be governed by the laws of the State of Florida (regardless of the laws that might otherwise govern under applicable Florida principles of conflicts of law) as to all matters, including but not limited to matters of validity, construction, effect, performance and remedy. West Palm Beach County, Florida shall be the proper place of venue for all suits to enforce this EULA, and any legal proceedings to enforce the provisions hereof shall be brought in the District Courts of West Palm Beach County, Florida, or in the United States District Court for the Southern District of Florida.
+
+\n\n6.2 Severability. The invalidity or unenforceability of any provision of this EULA shall not affect the validity or enforceability of the remaining provisions, and this EULA shall be construed as if such invalid or unenforceable provisions were omitted, unless the omission of such provision would deprive one of the parties of a material benefit of its bargain hereunder.
+
+\n\n6.3 Assignment. You may not assign this EULA. Any assignment made in contravention of this provision shall be null and void for all purposes.
+
+\n\n6.4 Binding Effect. This EULA shall be binding on and inure to the benefit of the parties and their respective successors and permitted assigns.
+
+\n\n6.5 Entire EULA. This EULA constitutes the entire EULA and understanding of the parties hereto in respect of the subject matter contained herein and supersedes all prior agreements, consents and understandings relating to such subject matter.
+
+\n\nARTICLE 7: REGISTRATION AND ACCEPTANCE.
+
+\n\nBy downloading, listening to, or otherwise accessing the Recordings, you represent and warrant that you are 18 years of age or older, capable of entering into a binding legal agreement, and have read, understand, and agree to be bound by all provisions of this EULA. You agree that Team 4 may collect and use information gathered in any manner as part of the product support services provided to you, if any, related to Scale Fit 1.0.0.Team 4 may also use this information to provide notices to you which may be of use or interest to you.
+    </string>
+    <string name="versionNamexml">v1.0.0</string>
+    <string name="skip">Skip</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_firebasetemp">Firebasetemp</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="height_inches">Height (inches)</string>
+    <string name="height_feet">Height (Feet)</string>
+    <string name="age">Age</string>
+
 </resources>

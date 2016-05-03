@@ -3,17 +3,21 @@ package www.team4.com.scalefit;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
+
 import android.content.CursorLoader;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
+
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -24,8 +28,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.firebase.client.AuthData;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -33,6 +43,11 @@ import java.util.List;
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
+
+    public static AuthData Session_KEY2;
+    private static  final boolean On = true;
+    private static  final boolean Off = false;
+    private final static String TAG = LoginActivity.class.getSimpleName();
     /**
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
@@ -55,6 +70,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Firebase.setAndroidContext(this);
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -94,6 +110,39 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * errors are presented and no actual login attempt is made.
      */
     private void attemptLogin() {
+
+        EditText emaileditText = (EditText) findViewById(R.id.email);
+        EditText passeditText = (EditText) findViewById(R.id.password);
+        String emailText;
+        String passwordText;
+
+
+
+        emailText = emaileditText.getText().toString();
+        passwordText = passeditText.getText().toString();
+        Firebase.setAndroidContext(this);
+
+         Firebase ref = new Firebase("https://scalefit.firebaseio.com/users");
+         ref.authWithPassword(emailText, passwordText, new Firebase.AuthResultHandler() {
+
+            @Override
+            public void onAuthenticated(AuthData authData) {
+                if (On) Log.i(TAG, "User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
+                setUser(authData);
+                Session_KEY2 = authData;
+            }
+
+            @Override
+            public void onAuthenticationError(FirebaseError firebaseError) {
+                // there was an error
+                if (On) Log.i(TAG, "Error");
+
+            }
+        });
+
+
+       //------------------------------------------------------------------
+
         if (mAuthTask != null) {
             return;
         }
@@ -283,7 +332,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
-                finish();
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
@@ -296,5 +345,19 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
         }
     }
-}
 
+    private void setUser(AuthData authData){
+
+        if (On) Log.i(TAG, "Ive come so far just to lose it all");
+        EditText emaileditText = (EditText) findViewById(R.id.email);
+        final String emailText;
+        emailText = emaileditText.getText().toString();
+       final Firebase ref = new Firebase("https://scalefit.firebaseio.com/");
+                        if (On) Log.i(TAG, "MAYBE YOU NOW");
+                        Map<String, String> map = new HashMap<>();
+                        map.put("email", emailText);
+
+                        if (On) Log.i(TAG, "ErrorRERERERERERERERER?");
+                        ref.child("users").child(authData.getUid()).setValue(map);
+    }
+}

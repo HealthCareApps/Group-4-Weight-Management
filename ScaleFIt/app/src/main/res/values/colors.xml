@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Default Resources -->
-    <color name="colorPrimary">#FFC107</color>
-    <color name="colorPrimaryDark">#FFA000</color>
-    <color name="colorAccent">#03A9F4</color>
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#D32F2F</color>
+    <color name="colorAccent">#FF9800</color>
+    <color name="colorSplashScreen">#000000</color>
 
     <!--Color variant of the app bar -->
     <!--Dark variant of the status bar. -->
-    <color name="primary_dark">#FFA000</color>
+    <color name="primary_dark">#D32F2F</color>
     <!-- Primary  Color-->
-    <color name="primary">#FFC107</color>
+    <color name="primary">#F44336</color>
     <!-- Light color variant of the app bar-->
-    <color name="primary_light">#FFECB3</color>
+    <color name="primary_light">#FFCDD2</color>
     <!-- Accent color-->
     <color name="accent">#03A9F4</color>
     <!--Primary text color. -->
@@ -19,12 +20,20 @@
     <!--Secondary text color -->
     <color name="secondary_text">#727272</color>
     <!-- Icon Color -->
-    <color name="icons">#212121</color>
+    <color name="icons">#FFFFFF</color>
     <!-- Divider color -->
     <color name="divider">#B6B6B6</color>
+    <!-- Button-->
+    <color name="button">#FF9900</color>
+    <!--Button2 -->
+    <color name="button2">#FFFFFF</color>
+    <!-- Button-->
+    <color name="buttontext">#FFFFFF</color>
+    <!--Button2 -->
+    <color name="buttontext2">#FF9900</color>
     <!-- -->
 
-    <integer-array name="ultimate_calculators_colors">
+    <integer-array name="ScaleFit_colors">
         <item>@color/primary</item>
         <item>@color/primary_dark</item>
         <item>@color/primary_light</item>
@@ -33,5 +42,8 @@
         <item>@color/secondary_text</item>
         <item>@color/icons</item>
         <item>@color/divider</item>
+        <item>@color/colorSplashScreen</item>
+        <item>@color/button</item>
+        <item>@color/button2</item>
     </integer-array>
 </resources>
